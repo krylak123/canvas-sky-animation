@@ -1,1 +1,1 @@
-console.log('working');
+import './scss/index.scss';
