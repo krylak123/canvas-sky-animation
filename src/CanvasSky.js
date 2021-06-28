@@ -26,6 +26,20 @@ class CanvasSky {
         this.ctx.fillRect(0, 0, this.width, this.height);
     }
 
+    drawFloor() {
+        this.ctx.save();
+
+        this.ctx.fillStyle = '#004500';
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(-100, this.height);
+        this.ctx.bezierCurveTo(this.width * .2, 800, this.width * .8, 800, this.width + 100, this.height);
+        this.ctx.fill();
+
+
+        this.ctx.restore();
+    }
+
     generateStars(count) {
         let stars = [];
 
@@ -96,6 +110,7 @@ class CanvasSky {
         this.clearCanvas();
         this.drawStars();
         this.updateStars();
+        this.drawFloor();
         this.drawOverlayer();
 
         requestAnimationFrame(() => this.draw());
