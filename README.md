@@ -1,12 +1,12 @@
-# React Router simple page
-> Available on [GitHub Pages](https://krylak123.github.io/canvas-sky-animation/)
+# Canvas Sky Animation
 
 ## General info
 The purpose of the project is expand a programming knowledge in JavaScript.
 
 ## Setup
-`npm install`
-`npm start`
+* `git clone https://github.com/krylak123/canvas-sky-animation.git`
+* `npm install`
+* `npm start`
 
 ## Screenshots
 ![Example screenshot](public/images/readme1.png)
