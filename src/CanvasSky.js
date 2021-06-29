@@ -40,6 +40,22 @@ class CanvasSky {
         this.ctx.restore();
     }
 
+    drawSun() {
+        this.ctx.save();
+
+        const gradient = this.ctx.createRadialGradient(this.width / 2, 90, 10, this.width / 2, 90, 80);
+        gradient.addColorStop(0, 'yellow');
+        gradient.addColorStop(1, '#ff3535');
+
+        this.ctx.fillStyle = gradient;
+
+        this.ctx.beginPath();
+        this.ctx.arc(this.width / 2, 90, 80, 0, 2 * Math.PI);
+        this.ctx.fill();
+
+        this.ctx.restore();
+    }
+
     generateStars(count) {
         let stars = [];
 
@@ -108,6 +124,7 @@ class CanvasSky {
 
     draw() {
         this.clearCanvas();
+        this.drawSun();
         this.drawStars();
         this.updateStars();
         this.drawFloor();
